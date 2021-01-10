@@ -4,8 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fotofabriek Wars</title>
+  <style>
+    #fotofabriek-wars {
+      position: relative;
+    }
+
+    .image-holder {
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      top: 0;
+    }
+
+    .image {
+      display: block;
+      height: 32px;
+      width: 32px;
+      background-image: url('assets/characters/charachters.png');
+      background-position: -32px 0;
+      animation: walkDown 0.5s steps(2) infinite;
+      zoom: 3;
+    }
+
+    @keyframes walkDown {
+      from {
+        background-position: 0px 0px;
+      }
+      to {
+        background-position: -128px 0;
+      }
+    }
+  </style>
 </head>
 <body>
-  <section id="fotofabriek-wars"></section>
+  <section id="fotofabriek-wars">
+    <div class="image-holder">
+      <div class=image></div>
+    </div>
+  </section>
 </body>
 </html>

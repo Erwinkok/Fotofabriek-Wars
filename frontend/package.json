@@ -4,7 +4,10 @@
   "description": "An original Fotofabriek Wars game",
   "main": "src/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vue-cli-service serve --open",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
   },
   "repository": {
     "type": "git",
@@ -32,10 +35,12 @@
     "babel-plugin-transform-vue-jsx": "^3.7.0",
     "eslint": "^7.17.0",
     "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^5.0.0",
     "eslint-plugin-vue": "^7.4.1",
-    "sass-loader": "^10.1.0"
+    "sass-loader": "^10.1.0",
+    "vue-template-compiler": "^2.6.12"
   }
 }
