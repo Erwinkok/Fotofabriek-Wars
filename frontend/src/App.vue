@@ -1,5 +1,20 @@
-<template></template>
+<template>
+    <canvas />
+</template>
 
-<script></script>
+<script>
+import { mapGetters } from "vuex";
+
+export default {
+    computed: {
+        ...mapGetters([
+            "keyboard"
+        ])
+    },
+    created () {
+        this.keyboard.onKeyDown("DIRECTION_DOWN", alert);
+    }
+};
+</script>
 
 <style lang="scss"></style>
