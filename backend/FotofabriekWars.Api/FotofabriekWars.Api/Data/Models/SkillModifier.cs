@@ -4,7 +4,7 @@ namespace FotofabriekWars.Api.Data.Models
 {
     public class SkillModifier
     {
-        public int Modifier { get; set; }
+        public decimal Modifier { get; set; }
 
         public Skill Skill { get; set; }
     }
