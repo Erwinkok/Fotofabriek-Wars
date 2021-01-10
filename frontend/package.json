@@ -4,7 +4,9 @@
   "description": "An original Fotofabriek Wars game",
   "main": "src/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "vue-cli-service serve --open",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
   },
   "repository": {
     "type": "git",
@@ -22,9 +24,12 @@
     "vuex": "^3.6.0"
   },
   "devDependencies": {
+    "@vue/cli": "^4.5.10",
     "@vue/cli-plugin-babel": "^4.5.10",
     "@vue/cli-plugin-eslint": "^4.5.10",
+    "@vue/cli-plugin-typescript": "^4.5.10",
     "@vue/cli-service": "^4.5.10",
+    "@vue/cli-service-global": "^4.5.10",
     "babel-eslint": "^10.1.0",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
     "babel-loader": "^8.2.2",
@@ -32,10 +37,13 @@
     "babel-plugin-transform-vue-jsx": "^3.7.0",
     "eslint": "^7.17.0",
     "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^5.0.0",
     "eslint-plugin-vue": "^7.4.1",
-    "sass-loader": "^10.1.0"
+    "sass-loader": "^10.1.0",
+    "ts-loader": "^8.0.14",
+    "typescript": "^4.1.3"
   }
 }
