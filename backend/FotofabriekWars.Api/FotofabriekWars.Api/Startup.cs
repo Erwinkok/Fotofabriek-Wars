@@ -1,4 +1,5 @@
 using FotofabriekWars.Api.Data;
+using FotofabriekWars.Api.Data.Seed;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -21,7 +22,9 @@ namespace FotofabriekWars.Api
         {
             services.AddControllers();
 
-            services.AddSingleton<DataAccessor>();
+            services
+                .AddSingleton<DataAccessor>()
+                .AddSingleton<DataSeed>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
