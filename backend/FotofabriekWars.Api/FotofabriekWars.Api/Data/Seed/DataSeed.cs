@@ -38,27 +38,37 @@ namespace FotofabriekWars.Api.Data.Seed
                     {
                         new Models.Action
                         {
+                            Id = 0,
                             Name = "Explain why enemy is wrong",
-                            SkillModifier = new SkillModifier
+                            BaseDamage = 20,
+                            SkillModifiers = new List<SkillModifier>()
                             {
-                                Skill = Skill.Intelligence,
-                                Modifier = 3,
+                                new SkillModifier
+                                {
+                                    Skill = Skill.Intelligence,
+                                    Modifier = 3,
+                                },
                             },
                         },
                         new Models.Action
                         {
+                            Id = 1,
                             Name = "Explain why task is delayed",
-                            SkillModifier = new SkillModifier
+                            BaseDamage = 10,
+                            SkillModifiers = new List<SkillModifier>()
                             {
-                                Skill = Skill.Communication,
-                                Modifier = 3,
+                                new SkillModifier
+                                {
+                                    Skill = Skill.Communication,
+                                    Modifier = 3,
+                                }
                             },
                         },
                     },
                 },
                 new Character
                 {
-                    Id = 0,
+                    Id = 1,
                     Name = "Jelle",
                     Health = 200,
                     MaxHealth = 200,
@@ -81,27 +91,37 @@ namespace FotofabriekWars.Api.Data.Seed
                     {
                         new Models.Action
                         {
+                            Id = 2,
                             Name = "Refactor ShoppingCart frontend",
-                            SkillModifier = new SkillModifier
+                            BaseDamage = 30,
+                            SkillModifiers = new List<SkillModifier>()
                             {
-                                Skill = Skill.Intelligence,
-                                Modifier = 2,
+                                new SkillModifier
+                                {
+                                    Skill = Skill.Intelligence,
+                                    Modifier = 2,
+                                }
                             },
                         },
                         new Models.Action
                         {
+                            Id = 3,
                             Name = "Train intern",
-                            SkillModifier = new SkillModifier
+                            BaseDamage = 5,
+                            SkillModifiers = new List<SkillModifier>()
                             {
-                                Skill = Skill.Communication,
-                                Modifier = 4,
+                                new SkillModifier
+                                {
+                                    Skill = Skill.Communication,
+                                    Modifier = 4,
+                                }
                             },
                         },
                     },
                 },
                 new Character
                 {
-                    Id = 0,
+                    Id = 2,
                     Name = "Erwin",
                     Health = 200,
                     MaxHealth = 200,
@@ -124,11 +144,16 @@ namespace FotofabriekWars.Api.Data.Seed
                     {
                         new Models.Action
                         {
+                            Id = 4,
                             Name = "Have conversation with manager",
-                            SkillModifier = new SkillModifier
+                            BaseDamage = 50,
+                            SkillModifiers = new List<SkillModifier>()
                             {
-                                Skill = Skill.Communication,
-                                Modifier = 5,
+                                new SkillModifier
+                                {
+                                    Skill = Skill.Communication,
+                                    Modifier = 5,
+                                }
                             },
                         },
                     },

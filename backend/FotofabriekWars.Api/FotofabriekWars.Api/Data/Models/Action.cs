@@ -1,9 +1,15 @@
-﻿namespace FotofabriekWars.Api.Data.Models
+﻿using System.Collections.Generic;
+
+namespace FotofabriekWars.Api.Data.Models
 {
     public class Action
     {
+        public int Id { get; set; }
+
         public string Name { get; set; }
 
-        public SkillModifier SkillModifier { get; set; }
+        public int BaseDamage { get; set; }
+
+        public ICollection<SkillModifier> SkillModifiers { get; set; }
     }
 }

@@ -18,5 +18,12 @@ namespace FotofabriekWars.Api.Data
         {
             return _characters.SingleOrDefault(c => c.Id == id);
         }
+
+        public Action GetAction(int id)
+        {
+            return _characters
+                .SelectMany(c => c.KnownActions)
+                .SingleOrDefault(a => a.Id == id);
+        }
     }
 }

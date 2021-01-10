@@ -1,5 +1,6 @@
 using FotofabriekWars.Api.Data;
 using FotofabriekWars.Api.Data.Seed;
+using FotofabriekWars.Api.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -21,10 +22,14 @@ namespace FotofabriekWars.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddMvc();
 
             services
                 .AddSingleton<DataAccessor>()
                 .AddSingleton<DataSeed>();
+
+            services
+                .AddScoped<DamageCalculator>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -38,8 +43,6 @@ namespace FotofabriekWars.Api
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
-            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
